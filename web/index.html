@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CompGraph — Competition Advisor on FalkorDB</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <header class="top">
+    <div class="brand">
+      <span class="logo">◈</span>
+      <div>
+        <h1>CompGraph</h1>
+        <p class="tag">Competition advisor agent · FalkorDB context layer</p>
+      </div>
+    </div>
+    <div class="badges">
+      <span id="modeBadge" class="badge">…</span>
+      <span class="badge muted">Company Brain</span>
+      <span class="badge muted">Agents × Connected Data</span>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="panel ask">
+      <h2>Ask the graph</h2>
+      <div class="chips">
+        <button type="button" data-q="What should I enter next?" data-tool="recommend_next">Recommend next</button>
+        <button type="button" data-q="Explain path for Graph Hacks" data-tool="explain_path" data-cid="c-graph-hacks">Explain path</button>
+        <button type="button" data-q="What am I missing for Open Agent?" data-tool="list_gaps" data-cid="c-open-agent">List gaps</button>
+        <button type="button" data-q="Show my decision history" data-tool="list_decisions">Decisions</button>
+        <button type="button" data-q="Remember: mark Kane CLI as candidate" data-tool="remember_decision" data-cid="c-kane-cli" data-status="candidate">Remember</button>
+      </div>
+      <form id="askForm">
+        <textarea id="question" rows="3" placeholder="e.g. Why is Open Agent blocked? What should I enter next?"></textarea>
+        <div class="row">
+          <select id="tool">
+            <option value="">auto-detect</option>
+            <option value="recommend_next">recommend_next</option>
+            <option value="list_gaps">list_gaps</option>
+            <option value="explain_path">explain_path</option>
+            <option value="list_decisions">list_decisions</option>
+            <option value="remember_decision">remember_decision</option>
+            <option value="list_competitions">list_competitions</option>
+          </select>
+          <select id="competitionId">
+            <option value="">competition…</option>
+          </select>
+          <button type="submit" class="primary">Ask</button>
+        </div>
+      </form>
+      <div id="answer" class="answer empty">Answer will appear here — grounded in Cypher paths, not LLM guesses alone.</div>
+      <p id="meta" class="meta"></p>
+    </section>
+
+    <section class="panel viz">
+      <h2>Graph path</h2>
+      <p class="hint" id="pathHint">Multi-hop: Person → Resource → SATISFIES ← Requirement ← Competition</p>
+      <div id="canvasWrap">
+        <svg id="graphSvg" viewBox="0 0 640 420" role="img" aria-label="Graph path visualization"></svg>
+      </div>
+      <pre id="raw" class="raw"></pre>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      Built for <a href="https://www.wemakedevs.org/hackathons/falkordb" target="_blank" rel="noopener">Graph Hacks 2026</a>
+      · <a href="https://github.com/qinheyi/compgraph" target="_blank" rel="noopener">qinheyi/compgraph</a>
+      · MIT
+    </p>
+  </footer>
+  <script src="/app.js"></script>
+</body>
+</html>
