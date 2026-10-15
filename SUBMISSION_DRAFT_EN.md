@@ -4,7 +4,7 @@
 **Team:** Solo — Qin HEYI (team code AGPRKA)  
 **Tracks:** Company Brain (primary); Agents That Act on Connected Data (secondary)  
 **Repo:** https://github.com/qinheyi/compgraph  
-**Demo:** _<paste Vercel URL after deploy>_  
+**Demo:** https://compgraph.vercel.app  
 **Video:** _<paste YouTube / public link after upload>_
 
 ## One-liner
