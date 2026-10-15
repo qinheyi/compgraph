@@ -130,7 +130,9 @@ docker exec compgraph-falkordb redis-cli GRAPH.QUERY CompGraph \
 
 ## Screenshots
 
-![Recommend next](docs/screenshots/ui-recommend.png)
+![Recommend next (LIVE)](docs/screenshots/ui-recommend.png)
+
+![Explain path (LIVE)](docs/screenshots/ui-explain-path.png)
 
 ![Explain path](docs/screenshots/ui-explain-path.png)
 
