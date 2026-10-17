@@ -5,7 +5,7 @@
 **Tracks:** Company Brain (primary); Agents That Act on Connected Data (secondary)  
 **Repo:** https://github.com/qinheyi/compgraph  
 **Demo:** https://compgraph.vercel.app  
-**Video:** _<paste YouTube / public link after upload>_
+**Video:** https://github.com/qinheyi/compgraph/releases/download/graph-hacks-demo/compgraph-demo.mp4
 
 ## One-liner
 
